@@ -5,43 +5,43 @@
 class Dctl < Formula
   desc "Simple utility to provide insight into repo activity."
   homepage "https://github.com/mchmarny/dctl"
-  version "0.3.8"
+  version "0.3.9"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.3.8/dctl_darwin_amd64"
-      sha256 "7dbe27675fa4b7a31d7d31ce54bf38acd60b93b43a197cb7069c930ffd620e47"
-
-      def install
-        bin.install "dctl_darwin_amd64" => "dctl"
-      end
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.3.8/dctl_darwin_arm64"
-      sha256 "7f4161adbdacca88c4f567a55cbdfbf5c7b67051f699d665f89f9e89a87f387d"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.3.9/dctl_darwin_arm64"
+      sha256 "37e305cda8a792458f58c44f7ddb6d67c8d8ca756b444175cb47a7029c7a1f8a"
 
       def install
         bin.install "dctl_darwin_arm64" => "dctl"
       end
     end
+    if Hardware::CPU.intel?
+      url "https://github.com/mchmarny/dctl/releases/download/v0.3.9/dctl_darwin_amd64"
+      sha256 "04bb18ebcf56a4eeca92aad4adae696608094f23c3766625ff67a6367f0161b4"
+
+      def install
+        bin.install "dctl_darwin_amd64" => "dctl"
+      end
+    end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.3.8/dctl_linux_amd64"
-      sha256 "69a4a9f1c5e98beae651f3cf544bfb51efa9c382ca25764169bce200847d0c0d"
-
-      def install
-        bin.install "dctl_linux_amd64" => "dctl"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.3.8/dctl_linux_arm64"
-      sha256 "29f4cff33fb9d8c0759b20328e445c432d0ddd70ed6d4f59c1e0a0b754f747a8"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.3.9/dctl_linux_arm64"
+      sha256 "b4293173dbced1506065f09ddd7a9285518b55d593b5df74301277010a1e2bd4"
 
       def install
         bin.install "dctl_linux_arm64" => "dctl"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/mchmarny/dctl/releases/download/v0.3.9/dctl_linux_amd64"
+      sha256 "a7affeec5f3340379af16796d0e760359325ffcfd73ad7fce20c14158022f700"
+
+      def install
+        bin.install "dctl_linux_amd64" => "dctl"
       end
     end
   end
