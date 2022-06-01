@@ -5,21 +5,21 @@
 class Dctl < Formula
   desc "Simple utility to provide insight into repo activity."
   homepage "https://github.com/mchmarny/dctl"
-  version "0.3.16"
+  version "0.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.3.16/dctl_darwin_arm64"
-      sha256 "ab5a17f875bf9d5f17482cde5674f4cea559ea7822e73e40de6378a556bf7ca0"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.4.0/dctl_darwin_arm64"
+      sha256 "5aaa76c74c337e6d2364ca82e331484697d4865f45666e94bf6d1bf93b16ca41"
 
       def install
         bin.install "dctl_darwin_arm64" => "dctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.3.16/dctl_darwin_amd64"
-      sha256 "8601697d43116b49c41862b2bf5060219bd2faf9f82e42ae76ff615b1b654e7d"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.4.0/dctl_darwin_amd64"
+      sha256 "c7802acec263c57ba1b9f4ee1e71c830345c1bf41c6d02677c4a888383aadbf1"
 
       def install
         bin.install "dctl_darwin_amd64" => "dctl"
@@ -28,20 +28,20 @@ class Dctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.3.16/dctl_linux_amd64"
-      sha256 "eb0235cfc135c8b0b238f5162baefb51af593a699ef6ba72349255cc063a4959"
-
-      def install
-        bin.install "dctl_linux_amd64" => "dctl"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.3.16/dctl_linux_arm64"
-      sha256 "12bb2d98302061ffd8d1802ca2d51a38f5cfe1f5230ff76a49932cee8d9a1504"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.4.0/dctl_linux_arm64"
+      sha256 "52df60108fc554bcfa719ab1cb9550910479d1ef0c333980e2561f4e2a6ddbfc"
 
       def install
         bin.install "dctl_linux_arm64" => "dctl"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/mchmarny/dctl/releases/download/v0.4.0/dctl_linux_amd64"
+      sha256 "ef6657f7d0f1670b4af83dfdf82281d291bd69360930d1e6ecad7c533d95b67f"
+
+      def install
+        bin.install "dctl_linux_amd64" => "dctl"
       end
     end
   end
