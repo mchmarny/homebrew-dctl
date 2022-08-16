@@ -1,4 +1,4 @@
-# Install followme with Homebrew
+# Install dctl with Homebrew
 
 ```shell
 brew tap mchmarny/dctl
