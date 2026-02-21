@@ -5,21 +5,21 @@
 class Dctl < Formula
   desc "Simple utility to provide insight into repo activity."
   homepage "https://github.com/mchmarny/dctl"
-  version "0.5.0"
+  version "0.5.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.5.0/dctl_darwin_amd64"
-      sha256 "c221addf6d06fad5c7405d25ea9d448cc21592d4f410c18ac1ea327c2d4f0229"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.5.4/dctl_darwin_amd64"
+      sha256 "5507dbc232566e922acf61059011148234b35ac5d3558c35235d6978caa6a1ff"
 
       def install
         bin.install "dctl_darwin_amd64" => "dctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.5.0/dctl_darwin_arm64"
-      sha256 "a5c513b8e7e39048b741e80f08977a5c78946d5c7f4b9ebdda3adc1ef9ced14b"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.5.4/dctl_darwin_arm64"
+      sha256 "7a89748b80f4b1a800a44ad23a0f8760725641a10b9003ff42b72e4a93b25485"
 
       def install
         bin.install "dctl_darwin_arm64" => "dctl"
@@ -29,15 +29,15 @@ class Dctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.5.0/dctl_linux_amd64"
-      sha256 "838f6596771fcc4d443538df09df06edda0ce45d02a470ccaf20bb8a8eff27f0"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.5.4/dctl_linux_amd64"
+      sha256 "8d33ee2b0d57780491588fca7e241b43fbf0446d54d92c720d0828641079cf39"
       def install
         bin.install "dctl_linux_amd64" => "dctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.5.0/dctl_linux_arm64"
-      sha256 "f6b11ccfc4ff5c3a0adc5afa9a806fbf96e08e070871e45bc740c2b4821a90cc"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.5.4/dctl_linux_arm64"
+      sha256 "7eba734c92229c2bcf49f94432ccd06c32d8ed6a14ec9c4f2a1b207ef58a9afe"
       def install
         bin.install "dctl_linux_arm64" => "dctl"
       end
