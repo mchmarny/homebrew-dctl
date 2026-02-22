@@ -5,21 +5,21 @@
 class Dctl < Formula
   desc "Simple utility to provide insight into repo activity."
   homepage "https://github.com/mchmarny/dctl"
-  version "0.5.7"
+  version "0.6.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.5.7/dctl_darwin_amd64"
-      sha256 "bb8d9f3afdf0651c7bf252211af223f7321e87d7a43e570e2712e3fd672ccab5"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.6.0/dctl_darwin_amd64"
+      sha256 "5d1b56ec77d81d73a5782689ff00daa0e5944eb918e9c594fc5e6675a1ab1cd4"
 
       define_method(:install) do
         bin.install "dctl_darwin_amd64" => "dctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.5.7/dctl_darwin_arm64"
-      sha256 "41677e1883f41e0dfa39e2958effb5d037af25f61a985dccd87173d3cc6894f8"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.6.0/dctl_darwin_arm64"
+      sha256 "5b72790399925be4de5aa4fc8ab8e22dbb8c9e259efe95554c135079c00731af"
 
       define_method(:install) do
         bin.install "dctl_darwin_arm64" => "dctl"
@@ -29,15 +29,15 @@ class Dctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.5.7/dctl_linux_amd64"
-      sha256 "ada9c2da830ddcbfe1bd318b1953e4b2038959c08e46f862e522252f91169c6e"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.6.0/dctl_linux_amd64"
+      sha256 "5cf52229a69968615907d8c213d1f1a0d5b36b52cebf10f0bd07c0c41607b45e"
       define_method(:install) do
         bin.install "dctl_linux_amd64" => "dctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/dctl/releases/download/v0.5.7/dctl_linux_arm64"
-      sha256 "77ec38c28631eeeb47283530e8b4b7975762114b302ca555f38fdd7d821dc262"
+      url "https://github.com/mchmarny/dctl/releases/download/v0.6.0/dctl_linux_arm64"
+      sha256 "a90dc502afa7c7d52272c45c50f49c6da1f3234b99cb608ee4ed0d8078aa5df4"
       define_method(:install) do
         bin.install "dctl_linux_arm64" => "dctl"
       end
