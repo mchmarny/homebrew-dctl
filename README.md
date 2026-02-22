@@ -1,8 +1,7 @@
-# Install dctl with Homebrew
+# Install with Homebrew
 
 ```shell
-brew tap mchmarny/dctl
-brew install dctl
+brew tap mchmarny/tap
 ```
 
 New release will be automatically picked up with `brew upgrade`
