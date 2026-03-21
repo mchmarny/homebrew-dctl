@@ -5,21 +5,21 @@
 class Devpulse < Formula
   desc "Community health analytics for GitHub organizations and repositories"
   homepage "https://github.com/mchmarny/devpulse"
-  version "0.22.6"
+  version "0.23.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/devpulse/releases/download/v0.22.6/devpulse_darwin_amd64.tar.gz"
-      sha256 "f833efbb24935519d5978b648dbfb8f6de0ba07afdd7f8bdd12dc39a403c43ec"
+      url "https://github.com/mchmarny/devpulse/releases/download/v0.23.0/devpulse_darwin_amd64.tar.gz"
+      sha256 "1cd55e213f9a8d5083a4f5507a41911b49d47d110e77c91cde9920ebc746863d"
 
       define_method(:install) do
         bin.install "devpulse"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mchmarny/devpulse/releases/download/v0.22.6/devpulse_darwin_arm64.tar.gz"
-      sha256 "452273561da7de9f8849c526d88ec6d9c493e332e0abe56fbb7cff963f25e82c"
+      url "https://github.com/mchmarny/devpulse/releases/download/v0.23.0/devpulse_darwin_arm64.tar.gz"
+      sha256 "0a7b8aeee0703f38d5379dd4f7147f0b1c5b492983440ec640ead10a0b26020d"
 
       define_method(:install) do
         bin.install "devpulse"
@@ -29,15 +29,15 @@ class Devpulse < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/devpulse/releases/download/v0.22.6/devpulse_linux_amd64.tar.gz"
-      sha256 "a6da164c086c9123a95fc9d0c9dbfe354ef74d71e65cb3ab656cb498a1dff36a"
+      url "https://github.com/mchmarny/devpulse/releases/download/v0.23.0/devpulse_linux_amd64.tar.gz"
+      sha256 "cb1b4a934be3d980f0d2f6dfa5d4f522a20031463b6ff0034136885a0765baf9"
       define_method(:install) do
         bin.install "devpulse"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/devpulse/releases/download/v0.22.6/devpulse_linux_arm64.tar.gz"
-      sha256 "4874f3e538626f4edd45891a974c5960179e64c293eaf97787046d615ea48def"
+      url "https://github.com/mchmarny/devpulse/releases/download/v0.23.0/devpulse_linux_arm64.tar.gz"
+      sha256 "8559a849182396318e924b7a496d081b76dbefd9eb5d349d13f73cfcac69b414"
       define_method(:install) do
         bin.install "devpulse"
       end
